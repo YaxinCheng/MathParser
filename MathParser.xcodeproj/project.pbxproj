@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		14FA031821E58C000058E936 /* MathParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FA030E21E58C000058E936 /* MathParser.framework */; };
-		14FA031D21E58C000058E936 /* MathParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA031C21E58C000058E936 /* MathParserTests.swift */; };
 		14FA031F21E58C000058E936 /* MathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 14FA031121E58C000058E936 /* MathParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14FA032B21E58C190058E936 /* MathTokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA032821E58C190058E936 /* MathTokenizer.swift */; };
+		14FA032C21E58C190058E936 /* MathParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA032921E58C190058E936 /* MathParserError.swift */; };
+		14FA032D21E58C190058E936 /* MathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA032A21E58C190058E936 /* MathParser.swift */; };
+		14FA033021E58C220058E936 /* MathTokenizerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA032E21E58C220058E936 /* MathTokenizerTest.swift */; };
+		14FA033121E58C220058E936 /* MathParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FA032F21E58C220058E936 /* MathParserTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +31,12 @@
 		14FA031121E58C000058E936 /* MathParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathParser.h; sourceTree = "<group>"; };
 		14FA031221E58C000058E936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14FA031721E58C000058E936 /* MathParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14FA031C21E58C000058E936 /* MathParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathParserTests.swift; sourceTree = "<group>"; };
 		14FA031E21E58C000058E936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FA032821E58C190058E936 /* MathTokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTokenizer.swift; sourceTree = "<group>"; };
+		14FA032921E58C190058E936 /* MathParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserError.swift; sourceTree = "<group>"; };
+		14FA032A21E58C190058E936 /* MathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParser.swift; sourceTree = "<group>"; };
+		14FA032E21E58C220058E936 /* MathTokenizerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTokenizerTest.swift; sourceTree = "<group>"; };
+		14FA032F21E58C220058E936 /* MathParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				14FA031121E58C000058E936 /* MathParser.h */,
+				14FA032921E58C190058E936 /* MathParserError.swift */,
+				14FA032A21E58C190058E936 /* MathParser.swift */,
+				14FA032821E58C190058E936 /* MathTokenizer.swift */,
 				14FA031221E58C000058E936 /* Info.plist */,
 			);
 			path = MathParser;
@@ -80,7 +91,8 @@
 		14FA031B21E58C000058E936 /* MathParserTests */ = {
 			isa = PBXGroup;
 			children = (
-				14FA031C21E58C000058E936 /* MathParserTests.swift */,
+				14FA032F21E58C220058E936 /* MathParserTest.swift */,
+				14FA032E21E58C220058E936 /* MathTokenizerTest.swift */,
 				14FA031E21E58C000058E936 /* Info.plist */,
 			);
 			path = MathParserTests;
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					14FA030D21E58C000058E936 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					14FA031621E58C000058E936 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +207,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FA032C21E58C190058E936 /* MathParserError.swift in Sources */,
+				14FA032B21E58C190058E936 /* MathTokenizer.swift in Sources */,
+				14FA032D21E58C190058E936 /* MathParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +217,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FA031D21E58C000058E936 /* MathParserTests.swift in Sources */,
+				14FA033121E58C220058E936 /* MathParserTest.swift in Sources */,
+				14FA033021E58C220058E936 /* MathTokenizerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +357,7 @@
 		14FA032321E58C000058E936 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -359,6 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ycheng.MathParser;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -366,6 +385,7 @@
 		14FA032421E58C000058E936 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -392,6 +412,7 @@
 		14FA032621E58C000058E936 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SC2G2H5LRL;
@@ -410,6 +431,7 @@
 		14FA032721E58C000058E936 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SC2G2H5LRL;
