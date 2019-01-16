@@ -96,12 +96,12 @@ class MathTokenizerTest: XCTestCase {
     }
   }
   
-  func testExtraToken() {
+  func testInvalidToken() {
     do {
       _ = try tokenizer.tokenize(expression: "8x")
       XCTFail()
     } catch {
-      if case MathParserError.extraToken = error {
+      if case MathParserError.invalidToken(value: _) = error {
         XCTAssert(true)
       } else { XCTFail(error.localizedDescription) }
     }

@@ -93,7 +93,10 @@ struct MathTokenizer {
         foundFlag = true
         break
       }
-      if foundFlag == false { throw MathParserError.extraToken }
+      if foundFlag == false {
+        let invalidExp = String(processingExp[index...])
+        throw MathParserError.invalidToken(value: invalidExp)
+      }
     }
     return tokens
   }

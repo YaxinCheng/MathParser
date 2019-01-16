@@ -22,9 +22,9 @@ class MathParserTest: XCTestCase {
     XCTAssertEqual(result, 4)
   }
   
-  func testExtraTokenError() {
+  func testInvalidTokenError() {
     testError(expression: "3*4x", errorInfo: "Extra tokens",
-              expectedError: .extraToken)
+              expectedError: .invalidToken(value: "x"))
   }
   
   func testMissingBracketError() {
@@ -35,6 +35,11 @@ class MathParserTest: XCTestCase {
   func testUnclosedBracketError() {
     testError(expression: "3*(4+2", errorInfo: "Unclosed Bracket",
               expectedError: .unclosedBracket)
+  }
+  
+  func testExtraTokenError() {
+    testError(expression: "3+4-", errorInfo: "Extra Token",
+              expectedError: .extraToken)
   }
   
   func testZeroDivisionError() {
